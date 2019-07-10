@@ -5,14 +5,24 @@
   <title>
     Test 01
   </title>
-  <meta name="description" content="Test 01">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> -->
 </head>
 
 <body>
   <a-scene embedded arjs='trackingMethod: best;'>
-    <a-entity gltf-model="assets/glTF/CesiumMan.gltf"></a-entity>
+
+      <a-assets>
+          <video id="test" autoplay loop="true" src="assets/test.mp4"></video>
+        </a-assets>
+      
+        <!-- Using the asset management system. -->
+        <a-video src="#test" width="16" height="9" position="0 0 -20"></a-video>
+      
+        <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+        <a-video src="assets/test.mp4"></a-video>
+
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 </body>
