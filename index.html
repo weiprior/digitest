@@ -12,7 +12,16 @@
 
 <body>
   <a-scene embedded arjs='trackingMethod: best;'>
-    <a-entity gltf-model="assets/glTF/CesiumMan.gltf"></a-entity>
+    
+          <a-assets>
+
+        <a-asset-item 
+          id="glbtestmodel"
+          src="assets/statue.glb">
+        </a-asset-item>
+
+      </a-assets>
+    <a-entity gltf-model="#glbtestmodel"></a-entity>
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 </body>
