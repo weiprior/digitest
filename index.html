@@ -12,9 +12,11 @@
 
 <body>
   <a-scene embedded arjs='trackingMethod: best;'>
-    
+  <a-marker preset="hiro">
+            <a-box position='0 0.5 0' material='color: black;'></a-box>
+  	</a-marker>  
  <a-entity gltf-model="assets/statue.glb" scale="0.2 0.2 0.2"></a-entity>
-    <a-marker-camera preset='hiro'></a-marker-camera>
+    <a-entity camera></a-entity>
   </a-scene>
 </body>
 
