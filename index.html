@@ -12,7 +12,15 @@
 
 <body>
   <a-scene embedded arjs='trackingMethod: best;'>
-    <a-entity gltf-model="assets/statue.glb"></a-entity>
+    
+        <a-assets>
+          <a-asset-item 
+          id="glbtestmodel"
+          src="https://cdn.glitch.com/90a30469-f038-4054-be9c-fd1ec94a810d%2Fkitchentest.glb?1537178470645">
+          </a-asset-item>
+        </a-assets>
+    
+    <a-entity gltf-model="glbtestmodel"></a-entity>
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 </body>
